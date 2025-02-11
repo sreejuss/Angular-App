@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: sreejuss/Angular-App@v4
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: sreejuss/Angular-App@v4
+        uses: actions/checkout@v4
         with:
           node-version: 14  # Use a version compatible with your project
 
@@ -28,7 +28,7 @@ jobs:
         run: ng build --output-path=dist --base-href /your-repo-name/
 
       - name: Deploy to GitHub Pages
-        uses: sreejuss/Angular-App@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: dist
